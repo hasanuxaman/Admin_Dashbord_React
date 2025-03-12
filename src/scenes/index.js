@@ -13,6 +13,7 @@ import Stream from "./stream";
 import FAQ from "./faq";
 import Geography from "./geography";
 import Employee from "./form/employee";
+import Login from "./form/login/login";
 
 
 export {
@@ -31,4 +32,5 @@ export {
   FAQ,
   Geography,
   Employee,
+  Login,
 };
