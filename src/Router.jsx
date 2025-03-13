@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import App from "./App";
 import Login  from "./scenes/form/login/login";
+import EmployeeForm from "./scenes/form/employee/EmployeeForm";
+
 import {
   Dashboard,
   Team,
@@ -28,8 +30,10 @@ const AppRouter = () => {
         <Route path="/login" element={<Login />} />
 
         {/* Main App Route with Nested Pages */}
-        <Route path="/" element={<App />}>
-          <Route index element={<Dashboard />} />
+          <Route path="/" element={<App />}>
+          <Route path="/employee_Add" element={<EmployeeForm/>} />
+          <Route index element={<Dashboard />} /> 
+          <Route path="/dashboard" element={<Dashboard />} /> 
           <Route path="team" element={<Team />} />
           <Route path="contacts" element={<Contacts />} />
           <Route path="invoices" element={<Invoices />} />

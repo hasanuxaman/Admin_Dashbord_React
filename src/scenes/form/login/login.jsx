@@ -1,25 +1,26 @@
 import { Box, Button, TextField, useMediaQuery } from "@mui/material";
 import { Formik } from "formik";
 import * as yup from "yup";
-import { useNavigate } from "react-router-dom"; // ✅ Import useNavigate
-
+import { useNavigate } from "react-router-dom"; 
 const initialValues = {
-  email: "",
+  username: "",
   password: "",
 };
 
 const loginSchema = yup.object().shape({
-  email: yup.string().email("Invalid email").required("Required"),
+  // email: yup.string().email("Invalid email").required("Required"),
+  username: yup.string().required("Required"), // শুধু টেক্সট হিসেবে নেবে, ইমেইল চেক করবে না
   password: yup.string().min(6, "Password must be at least 6 characters").required("Required"),
 });
 
 const Login = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
-  const navigate = useNavigate(); // ✅ React Router থেকে useNavigate ব্যবহার করা
+  const navigate = useNavigate(); 
 
   const handleFormSubmit = async (values, actions) => {
     try {
-      const response = await fetch("/api/Auth/Login", {
+      console.log("Sending Data:", values); 
+      const response = await fetch("http://localhost:5166/api/Auth/Login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -36,11 +37,12 @@ const Login = () => {
 
       actions.resetForm({ values: initialValues });
 
-      // ✅ লগইন সফল হলে ড্যাশবোর্ডে পাঠানো
+      
       navigate("/dashboard");
 
     } catch (error) {
       console.error("Login Error:", error);
+      alert(error.message); 
     }
   };
 
@@ -58,12 +60,12 @@ const Login = () => {
               <TextField
                 fullWidth
                 variant="outlined"
-                type="email"
-                label="Email"
+                type="text"
+                label="user Name"
                 onBlur={handleBlur}
                 onChange={handleChange}
-                value={values.email}
-                name="email"
+                value={values.username}
+                name="username"
                 error={touched.email && !!errors.email}
                 helperText={touched.email && errors.email}
               />
