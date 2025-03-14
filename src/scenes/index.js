@@ -14,7 +14,11 @@ import FAQ from "./faq";
 import Geography from "./geography";
 import Employee from "./form/employee";
 import Login from "./form/login/login";
-import RequisitionForm from "./procurment"
+import RequisitionForm from "./procurment";
+import PurchaseOrderForm from "./procurment/PurchaseOrders";
+import PurchaseReceivedForm from "./procurment/PurchaseReceived";
+import GoodsReceivedForm from "./Inventory/GoodsReceived";
+import GoodsIssueForm from "./Inventory/GoodsIssued";
 
 
 export {
@@ -35,4 +39,8 @@ export {
   Employee,
   Login,
   RequisitionForm,
+  PurchaseOrderForm,
+  PurchaseReceivedForm,
+  GoodsReceivedForm,
+  GoodsIssueForm,
 };

@@ -3,6 +3,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import App from "./App";
 import Login  from "./scenes/form/login/login";
 import EmployeeForm from "./scenes/form/employee/EmployeeForm";
+import PurchaseOrderForm from "./scenes/procurment/PurchaseOrders";
+import PurchaseReceivedForm from "./scenes/procurment/PurchaseReceived";
+import PurchaseInvoiceForm from "./scenes/procurment/PurchaseInvoice";
+import GoodsReceivedForm from "./scenes/Inventory/GoodsReceived";
+import GoodsIssueForm from "./scenes/Inventory/GoodsIssued";
 
 import {
   Dashboard,
@@ -48,6 +53,12 @@ const AppRouter = () => {
           <Route path="geography" element={<Geography />} />
           <Route path="employee" element={<Employee />} />
           <Route path="/requsition" element={< RequisitionForm/>}/>
+          <Route path="/purchase-order" element={< PurchaseOrderForm/>}/>
+          <Route path="/purchase-received" element={< PurchaseReceivedForm/>}/>
+          <Route path="/purchase-invoice" element={< PurchaseInvoiceForm/>}/>
+          <Route path="/goods-received" element={< GoodsReceivedForm/>}/>
+          <Route path="/goods-issue" element={< GoodsIssueForm/>}/>
+
         </Route>
       </Routes>
     </Router>

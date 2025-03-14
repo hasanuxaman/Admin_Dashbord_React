@@ -98,6 +98,10 @@ const SideBar = () => {
           {/* Submenu - Employee Management */}
           <SubMenu label="Procurment Management" icon={<PeopleAltOutlined />} defaultOpen>
             <MenuItem onClick={() => navigate("/requsition")}>Requsition</MenuItem>
+            <MenuItem onClick={() => navigate("/purchase-order")}>Purchase Order</MenuItem>
+            <MenuItem onClick={() => navigate("/goods-received")}>Goods Received</MenuItem>
+            <MenuItem onClick={() => navigate("/goods-issue")}>Goods Issue</MenuItem>
+            <MenuItem onClick={() => navigate("/purchase-invoice")}>Purchase Invoice</MenuItem>
             <MenuItem onClick={() => navigate("/team")}>Manage Team</MenuItem>
             <MenuItem onClick={() => navigate("/employee")}>Employee List</MenuItem>
             <MenuItem onClick={() => navigate("/contacts")}>Contacts Information</MenuItem>
