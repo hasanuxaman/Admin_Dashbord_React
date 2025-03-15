@@ -20,6 +20,7 @@ const Login = () => {
   const handleFormSubmit = async (values, actions) => {
     try {
       console.log("Sending Data:", values); 
+      
       const response = await fetch("http://localhost:5166/api/Auth/Login", {
         method: "POST",
         headers: {
@@ -27,22 +28,36 @@ const Login = () => {
         },
         body: JSON.stringify(values),
       });
-
+  
       if (!response.ok) {
         throw new Error("Login failed!");
       }
-
+  
+      // Parse the response JSON
       const data = await response.json();
       console.log("Login Success:", data);
-
-      actions.resetForm({ values: initialValues });
-
-      
-      navigate("/dashboard");
-
+  
+      // Assuming the token is returned in the response body as `data.token`
+      const token = data.token;
+  
+      if (token) {
+        // Store the token in localStorage (or sessionStorage)
+        localStorage.setItem("jwtToken", token);  // You can also use sessionStorage.setItem
+  
+        // Reset form values
+        actions.resetForm({ values: initialValues });
+  
+        // Navigate to the dashboard or desired page after successful login
+        navigate("/dashboard");
+      } else {
+        // If no token, redirect to the login page
+        alert("Login failed: Token not received.");
+        navigate("/login");
+      }
+  
     } catch (error) {
       console.error("Login Error:", error);
-      alert(error.message); 
+      alert("An error occurred: " + error.message); 
     }
   };
 
