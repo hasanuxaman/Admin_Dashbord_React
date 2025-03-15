@@ -8,6 +8,7 @@ import PurchaseReceivedForm from "./scenes/procurment/PurchaseReceived";
 import PurchaseInvoiceForm from "./scenes/procurment/PurchaseInvoice";
 import GoodsReceivedForm from "./scenes/Inventory/GoodsReceived";
 import GoodsIssueForm from "./scenes/Inventory/GoodsIssued";
+import RequisitionForm from "./scenes/procurment/Requsition";
 
 import {
   Dashboard,
@@ -23,8 +24,7 @@ import {
   Calendar,
   Stream,
   Employee,
-  RequisitionForm,
-
+  
 } from "./scenes";
 
 
@@ -52,7 +52,7 @@ const AppRouter = () => {
           <Route path="faq" element={<FAQ />} />
           <Route path="geography" element={<Geography />} />
           <Route path="employee" element={<Employee />} />
-          <Route path="/requsition" element={< RequisitionForm/>}/>
+          <Route path="/requisition" element={< RequisitionForm/>}/>
           <Route path="/purchase-order" element={< PurchaseOrderForm/>}/>
           <Route path="/purchase-received" element={< PurchaseReceivedForm/>}/>
           <Route path="/purchase-invoice" element={< PurchaseInvoiceForm/>}/>

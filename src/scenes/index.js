@@ -14,7 +14,7 @@ import FAQ from "./faq";
 import Geography from "./geography";
 import Employee from "./form/employee";
 import Login from "./form/login/login";
-import RequisitionForm from "./procurment";
+import RequisitionForm from "./procurment/Requsition";
 import PurchaseOrderForm from "./procurment/PurchaseOrders";
 import PurchaseReceivedForm from "./procurment/PurchaseReceived";
 import GoodsReceivedForm from "./Inventory/GoodsReceived";
