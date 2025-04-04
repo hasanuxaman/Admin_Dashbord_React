@@ -24,7 +24,7 @@ const initialData = [
     { id: 2, issueNumber: "ISSUE002", product: "Office Chair", quantity: 5, warehouse: "Storage Unit A", issuedBy: "Jane Smith", status: "Pending", date: "2024-03-12" },
 ];
 
-const GoodsIssueForm = () => {
+const GoodsIssued = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const [rows, setRows] = useState(initialData);
@@ -186,4 +186,4 @@ const GoodsIssueForm = () => {
     );
 };
 
-export default GoodsIssueForm;
+export default GoodsIssued;

@@ -24,7 +24,7 @@ const initialData = [
     { id: 2, batchNumber: "BATCH002", product: "Office Chair", quantity: 30, warehouse: "Storage Unit A", receivedBy: "Jane Smith", status: "Pending", date: "2024-03-12" },
 ];
 
-const GoodsReceivedForm = () => {
+const GoodsReceived = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const [rows, setRows] = useState(initialData);
@@ -123,7 +123,7 @@ const GoodsReceivedForm = () => {
 
     return (
         <Box m="20px">
-            <Header title="FINISHED GOODS RECEIVED" subtitle="Manage Finished Goods Inventory" />
+            <Header title="GOODS RECEIVED" subtitle="Manage Finished Goods Inventory" />
 
             <Box display="flex" justifyContent="flex-end" mb={2}>
                 <Button variant="contained" startIcon={<AddIcon />} onClick={handleAddOpen} sx={{ backgroundColor: colors.blueAccent[700] }}>
@@ -186,4 +186,4 @@ const GoodsReceivedForm = () => {
     );
 };
 
-export default GoodsReceivedForm;
+export default GoodsReceived;

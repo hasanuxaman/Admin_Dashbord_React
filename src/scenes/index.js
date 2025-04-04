@@ -14,11 +14,11 @@ import FAQ from "./faq";
 import Geography from "./geography";
 import Employee from "./form/employee";
 import Login from "./form/login/login";
-import RequisitionForm from "./procurment/Requsition";
-import PurchaseOrderForm from "./procurment/PurchaseOrders";
-import PurchaseReceivedForm from "./procurment/PurchaseReceived";
-import GoodsReceivedForm from "./Inventory/GoodsReceived";
-import GoodsIssueForm from "./Inventory/GoodsIssued";
+import Requisition from "./procurment/Requsition";
+import PurchaseOrder from "./procurment/PurchaseOrders";
+import PurchaseReceived from "./procurment/PurchaseReceived";
+import GoodsReceived from "./Inventory/GoodsReceived";
+import PurchaseInvoice from "./Inventory/GoodsIssued";
 
 
 export {
@@ -38,9 +38,9 @@ export {
   Geography,
   Employee,
   Login,
-  RequisitionForm,
-  PurchaseOrderForm,
-  PurchaseReceivedForm,
-  GoodsReceivedForm,
-  GoodsIssueForm,
+  Requisition,
+  PurchaseOrder,
+  PurchaseReceived,
+  GoodsReceived,
+  PurchaseInvoice,
 };

@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import App from "./App";
 import Login  from "./scenes/form/login/login";
 import EmployeeForm from "./scenes/form/employee/EmployeeForm";
-import PurchaseOrderForm from "./scenes/procurment/PurchaseOrders";
-import PurchaseReceivedForm from "./scenes/procurment/PurchaseReceived";
+import PurchaseOrder from "./scenes/procurment/PurchaseOrders";
+import PurchaseReceived from "./scenes/procurment/PurchaseReceived";
 import PurchaseInvoiceForm from "./scenes/procurment/PurchaseInvoice";
-import GoodsReceivedForm from "./scenes/Inventory/GoodsReceived";
-import GoodsIssueForm from "./scenes/Inventory/GoodsIssued";
-import RequisitionForm from "./scenes/procurment/Requsition";
+import GoodsReceived from "./scenes/Inventory/GoodsReceived";
+import GoodsIssued from "./scenes/Inventory/GoodsIssued";
+import Requisition from "./scenes/procurment/Requsition";
 
 import {
   Dashboard,
@@ -52,12 +52,12 @@ const AppRouter = () => {
           <Route path="faq" element={<FAQ />} />
           <Route path="geography" element={<Geography />} />
           <Route path="employee" element={<Employee />} />
-          <Route path="/requisition" element={< RequisitionForm/>}/>
-          <Route path="/purchase-order" element={< PurchaseOrderForm/>}/>
-          <Route path="/purchase-received" element={< PurchaseReceivedForm/>}/>
+          <Route path="/requisition" element={< Requisition/>}/>
+          <Route path="/purchase-order" element={< PurchaseOrder/>}/>
+          <Route path="/purchase-received" element={< PurchaseReceived/>}/>
           <Route path="/purchase-invoice" element={< PurchaseInvoiceForm/>}/>
-          <Route path="/goods-received" element={< GoodsReceivedForm/>}/>
-          <Route path="/goods-issue" element={< GoodsIssueForm/>}/>
+          <Route path="/goods-received" element={< GoodsReceived/>}/>
+          <Route path="/goods-issue" element={< GoodsIssued/>}/>
 
         </Route>
       </Routes>

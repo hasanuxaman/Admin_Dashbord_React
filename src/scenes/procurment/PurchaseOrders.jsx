@@ -30,7 +30,7 @@ const initialPurchaseOrders = [
   { id: 2, vendor: "Vendor B", date: "2024-03-10", status: "Approved", items: [] },
 ];
 
-const PurchaseOrderManagement = () => {
+const PurchaseOrder = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [rows, setRows] = useState(initialPurchaseOrders);
@@ -177,4 +177,4 @@ const PurchaseOrderManagement = () => {
   );
 };
 
-export default PurchaseOrderManagement;
+export default PurchaseOrder;

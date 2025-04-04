@@ -24,7 +24,7 @@ const initialData = [
     { id: 2, invoiceNumber: "INV1235", supplier: "XYZ Corp", totalAmount: 2500, status: "Pending", date: "2024-03-10" },
 ];
 
-const PurchaseInvoiceForm = () => {
+const PurchaseInvoice = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const [rows, setRows] = useState(initialData);
@@ -191,4 +191,4 @@ const PurchaseInvoiceForm = () => {
     );
 };
 
-export default PurchaseInvoiceForm;
+export default PurchaseInvoice;

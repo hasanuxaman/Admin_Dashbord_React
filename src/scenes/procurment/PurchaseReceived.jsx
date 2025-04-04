@@ -24,7 +24,7 @@ const initialData = [
     { id: 2, poNumber: "PO1235", supplier: "XYZ Corp", item: "Office Chair", quantity: 5, receivedBy: "Jane Smith", status: "Pending", date: "2024-03-10" },
 ];
 
-const PurchaseReceivedForm = () => {
+const PurchaseReceived = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
 
@@ -199,4 +199,4 @@ const PurchaseReceivedForm = () => {
     );
 };
 
-export default PurchaseReceivedForm;
+export default PurchaseReceived;
